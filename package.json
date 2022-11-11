@@ -1,0 +1,56 @@
+{
+  "name": "use-shiki",
+  "version": "0.0.0",
+  "description": "React hook for using Shiki syntax highlighter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfoel/use-shiki.git"
+  },
+  "keywords": [
+    "hook",
+    "shiki",
+    "syntax-highlighting"
+  ],
+  "author": "Rafael Franco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfoel/use-shiki/issues"
+  },
+  "homepage": "https://github.com/rfoel/use-shiki#readme",
+  "scripts": {
+    "build:cjs": "esbuild index.ts --bundle --sourcemap --minify --outfile=dist/index.cjs.js --external:react",
+    "build:esm": "esbuild index.ts --bundle --sourcemap --minify --format=esm --outfile=dist/index.esm.js --external:react",
+    "build": "npm run build:cjs && npm run build:esm",
+    "lint": "eslint . --fix",
+    "postbuild": "npm run types",
+    "prebuild": "rimraf dist",
+    "types": "tsc --project tsconfig.build.json"
+  },
+  "dependencies": {
+    "shiki": "^0.11.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/react": "^18.0.25",
+    "esbuild": "^0.15.13",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.5",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  }
+}
