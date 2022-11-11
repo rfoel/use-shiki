@@ -1,6 +1,6 @@
 {
   "name": "use-shiki",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "React hook for using Shiki syntax highlighter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
