@@ -30,7 +30,8 @@
     "lint": "eslint . --fix",
     "postbuild": "npm run types",
     "prebuild": "rimraf dist",
-    "types": "tsc --project tsconfig.build.json"
+    "types": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "shiki": "^0.11.1"
@@ -43,7 +44,9 @@
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/react": "^18.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
     "esbuild": "^0.15.13",
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "rimraf": "^3.0.2",
